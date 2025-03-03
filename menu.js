@@ -5,7 +5,7 @@ function createComponent(data,sectn,catg,ind){
     let imgdiv = document.createElement('div');
     imgdiv.classList.add("imagea");
     let image = document.createElement('img');
-    image.src = component.image;
+    image.src = "/images/"+component.image;
     image.alt = "image";
     imgdiv.appendChild(image);
     compdiv.appendChild(imgdiv);
@@ -72,7 +72,7 @@ function opn(data,section,catg,comp){
     let cap = document.querySelector(".orderbox .cap");
     cap.innerHTML = component.cap;
     let image = document.querySelector(".orderbox .image img");
-    image.src = component.image;
+    image.src = "/images/"+component.image;
 
     // add to cart
     let arr = [section,catg,comp];
@@ -122,8 +122,6 @@ function displayData(data){
     let main = document.querySelector(".mainbar");
     for(let sectn in data){
         let secn = document.createElement("section");
-        // let flag = true;
-        // let ind = 0;
         for(let catg in data[sectn]){
             let catdiv = document.createElement("div");
             catdiv.classList.add("categ");
